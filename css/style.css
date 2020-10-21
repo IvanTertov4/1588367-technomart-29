@@ -3,23 +3,53 @@
 font-family: 'Cuprum', sans-serif;
 font-family: 'PT Sans', sans-serif;
 */
-:root{
---basic-red: #EE3643;
---basic-green:  #63A63E;
---basic-grey:#293449;
---basic-dark-grey: #32425C;
---basic-background: rgba(0,0,0,0);
---basic-white: #FFFFFF;
---basic-dark: #000000;
---footer-yellow:#FFD180;
---special-yellow: #FFBF47;
---special-blue: #3BBCE3;
---special-pink: #DC91D8;
---special-green: #8ED78F;
---basic-top-color: #F9F5F0;
---goods-last-price-color: #A9A9A9;
---basic-greylight:#f1f5f7;
-}/*HEADER*/
+
+:root
+{
+    --basic-red: #EE3643;
+    --basic-green:  #63A63E;
+    --basic-grey:#293449;
+    --basic-dark-grey: #32425C;
+    --basic-background: rgba(0,0,0,0);
+    --basic-white: #FFFFFF;
+    --basic-black: #000000;
+    --footer-yellow:#FFD180;
+    --special-yellow: #FFBF47;
+    --special-blue: #3BBCE3;
+    --special-pink: #DC91D8;
+    --special-green: #8ED78F;
+    --basic-top-color: #F9F5F0;
+    --goods-last-price-color: #A9A9A9;
+    --basic-greylight:#f1f5f7;
+    --custom-font: "Cuprum", Arial, sans-serif;
+}
+
+.body
+{
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--basic-black);
+    font-style: normal;
+    font-weight: normal;
+}
+
+a 
+{
+    text-decoration: none;
+}
+  
+img 
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/*------------------Стили для шапки------------------*/
 .main-header
 {
     background: var(--basic-background);
@@ -28,90 +58,51 @@ font-family: 'PT Sans', sans-serif;
 {
 background: var(--basic-grey)
 }
-.logo-div
+/*.logo-div
 {
     color: var(--basic-red) 
 }
 .logo{
     background: var(--basic-red);
     box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-}
-.search-link
+}*/
+.header-form-links
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 18px;
-    line-height: 24px;
     color: var(--basic-white);
-   
-    text-decoration: none;
 }
-.bookmarks-link
-{
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--basic-white);
-    text-decoration: none;
+.header-middle{
+    background: var(--basic-greylight);
 }
-.cart-link
+.header-text
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--basic-white);
-    text-decoration: none;
-}
-.order-link
-{
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--basic-white);
-    text-decoration: none;
-}
-.explanation-text
-{
-    font-family: Cuprum;
+    font-family: var(--custom-font);
     font-style: italic;
-    font-weight: normal;
     font-size: 16px;
     line-height: 23px;
     color: var(--basic-red)
 }
-.phone
+.header-phone
 {
-    font-family: Cuprum;
-    font-style: normal;
+    font-family: var(--custom-font);
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
     color: var(--basic-red)
 }
-.address
+.header-address
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-family: var(--custom-font);
     color: var(--basic-grey)
 }
-.login-link
+.header-login-link
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 21px;
     line-height: 21px;
-    color: var(--basic-dark)
+    color: var(--basic-dark);
+    background: var(--basic-white)
 }
 .main-navigation
 {
@@ -124,36 +115,27 @@ background: var(--basic-grey)
 }
 .navigation-item
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     color: var(--basic-white);
-    text-decoration: none;
     font-size: 18px;
-    line-height: 24px;
 }
-/*MAIN*/
+/*------------------Стили для основной части------------------*/
 .content-list
 {
     list-style-type: none;
-    padding-left: 0;
 }
 .list-link
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 14px;
     line-height: 18px;
-    text-decoration: none;
     color: var(--basic-white);
 }
 
 .materials
 {
     background: var(--special-yellow);
-    font-family: Cuprum;
-    font-style: normal;
+    font-family: var(--custom-font);
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
@@ -161,8 +143,7 @@ background: var(--basic-grey)
 .tools
 {
     background: var(--special-blue);
-    font-family: Cuprum;
-    font-style: normal;
+    font-family: var(--custom-font);
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
@@ -170,8 +151,7 @@ background: var(--basic-grey)
 .techs
 {
     background: var(--special-pink);
-    font-family: Cuprum;
-    font-style: normal;
+    font-family: var(--custom-font);
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
@@ -179,8 +159,7 @@ background: var(--basic-grey)
 .discount
 {
     background: var(--special-green);
-    font-family: Cuprum;
-    font-style: normal;
+    font-family:var(--custom-font);
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
@@ -188,20 +167,15 @@ background: var(--basic-grey)
 .delivery-list
 {
     background: var(--special-yellow);
-    font-family: Cuprum;
-    font-style: normal;
+    font-family: var(--custom-font);
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
 }
-.special-item
-{
-    background-color: #293449;
-}
+
 .special-item-heading
 {
-    font-family: Cuprum;
-    font-style: normal;
+    font-family: var(--custom-font);
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
@@ -209,21 +183,14 @@ background: var(--basic-grey)
 }
 .special-item-text
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
+    font-family: var(--custom-font);
     color: var(--basic-white);
 }
 .special-list-link
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
+    font-family: var(--custom-font);
     line-height: 18px;
-    background-color: var(--basic-red);
+    background: var(--basic-red);
     color: var(--basic-white);
     text-decoration: none;
 }
@@ -233,27 +200,19 @@ background: var(--basic-grey)
 }
 .popular-goods-heading
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 30px;
     line-height: 30px;
 }
 .popular-goods-link
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
+    font-family: var(--custom-font);
     line-height: 18px;
     color: var(--basic-white);
     background-color: var(--basic-red);
-    text-decoration: none;
 }
 .goods-name
 {
-    font-family: PT Sans;
-    font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 20px;
@@ -261,8 +220,6 @@ background: var(--basic-grey)
 .last-price
 {
     text-decoration: line-through;
-    font-family: PT Sans;
-    font-style: normal;
     font-weight: bold;
     font-size: 17px;
     line-height: 18px;
@@ -270,8 +227,6 @@ background: var(--basic-grey)
 }
 .new-price
 {
-    font-family: PT Sans;
-    font-style: normal;
     font-weight: bold;
     font-size: 17px;
     line-height: 18px;
@@ -284,20 +239,14 @@ background: var(--basic-grey)
 }
 .popular-manufacturers-heading
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 30px;
     line-height: 30px;
 }
 .popular-manufacturers-link
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
+    font-family: var(--custom-font);
     line-height: 18px;
-    text-decoration: none;
     color: var(--basic-white);
     background: var(--basic-red);
 }
@@ -307,53 +256,42 @@ background: var(--basic-grey)
 }
 .services-heading
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 30px;
     line-height: 30px;
 }
 .services-text
 {
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 13px;
-    line-height: 24px;
 }
 .delivery-heading
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 30px;
     line-height: 30px;
 }
 .services-list
 {
     list-style-type: none;
-    padding-left: 0;
+
 }
 .services-item-white
 {
-    font-family: Cuprum;
-    font-style: normal;
+    font-family: var(--custom-font);
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
     background: var(--basic-white);
-    text-decoration: none;
+
 }
 .services-item-grey
 {
-    font-family: Cuprum;
-    font-style: normal;
+    font-family: var(--custom-font);
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
     background: var(--basic-grey);
     color: var(--basic-white);
-    text-decoration: none;
 }
 .company-info
 {
@@ -361,68 +299,45 @@ background: var(--basic-grey)
 }
 .company-info-heading
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 30px;
     line-height: 30px;
 }
 .company-info-text
 {
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 13px;
     line-height: 24px;
 }
 .info-list
 {
     list-style-type: none;
-    padding-left: 0; 
 }
 .info-item
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 18px;
-    line-height: 24px;
 }
 .company-info-link
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
+    font-family: var(--custom-font);
     line-height: 18px;
     color: var(--basic-white);
     background: var(--basic-red);
-    text-decoration: none;
 }
 .contacts-heading
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 30px;
     line-height: 30px;
 }
 .contacts-text
 {
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: normal;
     font-size: 13px;
-    line-height: 24px;
 }
 .contacts-link
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
+    font-family: var(--custom-font);
     line-height: 18px;
-    text-decoration: none;
     color: var(--basic-white);
     background-color: var(--basic-red);
 }
@@ -435,84 +350,60 @@ background: var(--basic-grey)
     background: var(--basic-dark-grey);
 }
 .footer-address{
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 18px;
-    line-height: 24px;
     color: var(--basic-white)
 }
 .footer-phone
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 18px;
-    line-height: 24px;
     color: var(--basic-white)
 }
 .footer-list
 {
     list-style-type: none;
-    padding-left: 0; 
 }      
 .footer-content
 {
     list-style-type: none;
-    padding-left: 0; 
 }
 .footer-list-item
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 18px;
-    line-height: 24px;
     color: var(--basic-white);
-    text-decoration: none;
 }
 .footer-content-item
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 18px;
-    line-height: 24px;
-    color:var(--footer-yellow)
+    color:var(--footer-yellow);
 }
 .footer-text-info
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white)
 }
 .footer-text-comeback
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);
 }
 .footer-link
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 16px;
     line-height: 18px;
     color: var(--footer-yellow);
-    text-decoration: none;
 }
 .footer-text-developer
 {
-    font-family: Cuprum;
-    font-style: normal;
-    font-weight: normal;
+    font-family: var(--custom-font);
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);

@@ -5,7 +5,9 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/normalize.css" rel="stylesheet">
   </head>
+
   <body class="page-body">
     <header class="main-header">
       <div class="header-top">
@@ -15,20 +17,22 @@
             <img src="https://via.placeholder.com/150x100" class="logo" alt="Логотип компании Техномарт">
           </a>
         </div>
-        <a class="search-link" href="#">Поиск</a>
-        <a class="bookmarks-link" href="#">Закладки</a>
-        <a class="cart-link" href="#">Корзина</a>
-        <a class="order-link" href="#">Оформить заказ</a>
+        <a class="header-form-links" href="#">Поиск</a>
+        <div>
+        <a class="header-form-links" href="#">Закладки</a>
+        <a class="header-form-links" href="#">Корзина</a>
+        <a class="header-form-links" href="#">Оформить заказ</a></div>
       </div>
-      <p class="explanation-text">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-      <div>
-        
-        <a class="phone" href="tel:+78125550555">Телефон: +7 (812) 555-05-55</a>
-        <address>Адрес: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-      </div>
-      <div>
-        <a class="login-link" href="#">Вход</a>
-        <a class="login-link" href="#">Регистарция</a>
+      <div class="header-middle">
+        <p class="header-text">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        <div>
+          <a class="header-phone" href="tel:+78125550555">Телефон: +7 (812) 555-05-55</a>
+          <address class="header-address">Адрес: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        </div>
+        <div>
+          <a class="header-login-link" href="#">Вход</a>
+          <a class="header-login-link" href="#">Регистарция</a>
+        </div>
       </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
@@ -191,8 +195,8 @@
           <div>
             <ul class="services-list">
               <li><a class="services-item-white" href="#">Доставка</a></li>
-              <li><a  class="services-item-grey"href="#">Гарантия</a></li>
-              <li><a  class="services-item-grey"href="#">Кредит</a></li>
+              <li><a  class="services-item-grey" href="#">Гарантия</a></li>
+              <li><a  class="services-item-grey" href="#">Кредит</a></li>
             </ul>
           </div>
           <div>
