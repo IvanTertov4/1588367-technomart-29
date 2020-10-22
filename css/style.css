@@ -21,7 +21,11 @@ font-family: 'PT Sans', sans-serif;
     --basic-top-color: #F9F5F0;
     --goods-last-price-color: #A9A9A9;
     --basic-greylight:#f1f5f7;
+    --catalog-heading-color:#F2F6F8;
     --custom-font: "Cuprum", Arial, sans-serif;
+    --catalog-color: #F7F3EC;
+    --catalog-button-border-color: #E5E5E5;
+    --catalog-low-info-color: #F1F5F7;
 }
 
 .body
@@ -407,4 +411,81 @@ background: var(--basic-grey)
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);
+}
+/*----------------------------------------------------------------*/
+.goods-way-list{
+    list-style-type: none;
+}
+.goods-way-link{
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-black)
+}
+.catalog-heading{
+    font-family: var(--custom-font);
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--basic-dark-grey);
+    background: var(--catalog-heading-color);
+}
+.catalog-top{
+    background: var(--catalog-color);
+}
+.form-name{
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-black)
+}
+.form-heading{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    color: var(--basic-black);
+}
+.form-item{
+    font-size: 15px;
+    line-height: 19px;
+    color: var(--basic-black);
+}
+.form-button{
+    background: var(--basic-white);
+    border: 1px solid var(--catalog-button-border-color);
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 18px;
+}
+.sorting-list{
+    list-style-type: none;
+    font-size: 13px;
+    line-height: 18px;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    color: var(--basic-black);
+}
+.numbering-list{
+    list-style-type: none;
+    padding-left: 0;
+}
+.nambering-item{
+    background: var(--basic-white);
+    border: 1px solid var(--catalog-button-border-color);
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.numbering{
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-black);
+}
+.catalog-low-info{
+    background: var(--catalog-low-info-color);
+}
+.catalog-low-info-heading{
+    font-size: 30px;
+    line-height: 30px;
+    font-family: var(--custom-font);
+}
+.catalog-low-info-text{
+    font-size: 13px;
+
 }
