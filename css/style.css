@@ -22,7 +22,12 @@
     --catalog-low-info-color: #F1F5F7;
 }
 
-.page-body{
+.page{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+    height: 100%;
     min-width: 960px;
     margin: 0;
     padding: 0;
@@ -32,6 +37,10 @@
     color: var(--basic-black);
     font-style: normal;
     font-weight: normal;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
 }
 
 a{
@@ -43,22 +52,37 @@ img{
     height: auto;
 }
 
-/*------------------Стили для шапки------------------*/
+ul{
+    list-style-type: none;
+}
+
 .main-header{
     background: var(--basic-background);
+    margin-bottom: 59px;
 }
 
 .header-top{
-background: var(--basic-grey)
+    background: var(--basic-grey);
+    display: grid;
+    grid-template-columns: 130px 307px 416px 130px;
+    grid-template-rows:
+      42px;
 }
-/*.logo-div
-{
-    color: var(--basic-red) 
+.group-links{
+    
+    display: grid;
+    grid-template-columns: 106px 98px 150px;
 }
-.logo{
-    background: var(--basic-red);
-    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-}*/
+.form-link{
+    background: var(--special-green);
+    width: 150px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .header-form-links{
     font-family: var(--custom-font);
     font-size: 18px;
@@ -67,16 +91,40 @@ background: var(--basic-grey)
 
 .header-middle{
     background: var(--basic-greylight);
+    display: grid;
+    grid-template-columns: 130px 312px 316px 312px 130px;
+    grid-template-rows:
+    139px
+    139px;
 }
 
+
 .header-text{
+    grid-column: 2/3;
     font-family: var(--custom-font);
     font-style: italic;
     font-size: 16px;
     line-height: 23px;
-    color: var(--basic-red)
+    color: var(--basic-red);
+    width: 312px;
+    height: 139px;
+    display: flex;
+    align-items: center;
 }
-
+.header-contacts{
+    grid-column: 3/4;
+    width: 312px;
+    height: 139px;
+    display: block;
+    margin-top: 46px;
+}
+.header-account{
+    grid-column: 4/5;
+    width: 312px;
+    height: 139px;
+    display: inline;
+    margin-top: 46px;
+}
 .header-phone{
     font-family: var(--custom-font);
     font-weight: bold;
@@ -84,7 +132,6 @@ background: var(--basic-grey)
     line-height: 30px;
     color: var(--basic-red)
 }
-
 .header-address{
     font-family: var(--custom-font);
     color: var(--basic-grey)
@@ -97,23 +144,33 @@ background: var(--basic-grey)
     color: var(--basic-dark);
     background: var(--basic-white)
 }
-
-.main-navigation{
+.main-header-bar{
+    grid-column: 2/5;
+    grid-row: 2/2;
+}
+.main-navigation-wrapper {
+    
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
     background: var(--basic-dark-grey);
     box-shadow: inset 0px -5px 0px #293449;
-}
-
-.site-navigation{
-    list-style-type: none;
+    
 }
 
 .navigation-item{
+   
     font-family: var(--custom-font);
     color: var(--basic-white);
     font-size: 18px;
 }
 
-/*------------------Стили для основной части------------------*/
+.visual-hidden{
+    visibility: hidden;
+}
+
 .content-list{
     list-style-type: none;
 }
@@ -186,7 +243,23 @@ background: var(--basic-grey)
     text-decoration: none;
 }
 
+.popular-goods{
+    display: grid;
+    grid-template-columns: 130px 220px 220px 220px 220px 130px;
+    grid-template-rows:
+        89px
+        318x;
+    gap: 20px;
+    max-width: 940px;
+    margin-bottom: 70px;
+}
+
 .popular-goods-top{
+    grid-column: 2/7;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 940px;
+    height: 89px;
     background-color: var(--basic-top-color);
 }
 
@@ -202,6 +275,32 @@ background: var(--basic-grey)
     line-height: 18px;
     color: var(--basic-white);
     background-color: var(--basic-red);
+}
+
+.goods-item-1{
+    grid-column: 2/3;
+    grid-row: 2;
+    width: 220px;
+    height: 318px;
+    border: 2px solid var(--basic-black);
+}
+.goods-item-2{
+    grid-column: 3/4;
+    width: 220px;
+    height: 318px;
+    border: 2px solid var(--basic-black);
+}
+.goods-item-3{
+    grid-column: 4/5;
+    width: 220px;
+    height: 318px;
+    border: 2px solid var(--basic-black);
+}
+.goods-item-4{
+    grid-column: 5/6;
+    width: 220px;
+    height: 318px;
+    border: 2px solid var(--basic-black);
 }
 
 .goods-name{
@@ -226,8 +325,22 @@ background: var(--basic-grey)
     color: var(--basic-white);
 }
 
+.popular-manufacturers{
+    display: grid;
+    grid-template-columns: 130px 220px 220px 220px 220px 130px;
+    grid-template-rows:
+        89px
+        145px
+        145px;
+    gap: 20px;
+    max-width: 940px;
+}
+
 .popular-manufacturers-top{
     background: var(--basic-top-color);
+    grid-column: 2/6;
+    grid-row: 1;
+    
 }
 
 .popular-manufacturers-heading{
@@ -242,6 +355,63 @@ background: var(--basic-grey)
     line-height: 18px;
     color: var(--basic-white);
     background: var(--basic-red);
+}
+
+.manufacturers-item-0{
+    width:220;
+    height: 145;
+    border: 2px solid var(--basic-black);
+    grid-column:2/3;
+    grid-row:2;
+}
+.manufacturers-item-1{
+    width:220;
+    height: 145;
+    border: 2px solid var(--basic-black);
+    grid-column:3/4;
+    grid-row:2;
+}
+.manufacturers-item-2{
+    width:220;
+    height: 145;
+    border: 2px solid var(--basic-black);
+    grid-column:4/5;
+    grid-row:2;
+}
+.manufacturers-item-3{
+    width:220;
+    height: 145;
+    border: 2px solid var(--basic-black);
+    grid-column:5/6;
+    grid-row:2;
+}
+.manufacturers-item-4{
+    width:220;
+    height: 145;
+    border: 2px solid var(--basic-black);
+    grid-column:2/3;
+    grid-row:3;
+}
+.manufacturers-item-5{
+    width:220;
+    height: 145;
+    border: 2px solid var(--basic-black);
+    grid-column:3/4;
+    grid-row:3;
+}
+.manufacturers-item-6{
+    width:220;
+    height: 145;
+    border: 2px solid var(--basic-black);
+    grid-column:4/5;
+    grid-row:3;
+}
+.manufacturers-item-7{
+    width:220;
+    height: 145;
+    border: 2px solid var(--basic-black);
+    grid-column:5/6;
+    grid-row:3;
 }
 
 .services{
